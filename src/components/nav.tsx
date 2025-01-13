@@ -1,15 +1,17 @@
-import React from 'react'
-import { ModeToggle } from './theme-toggle'
+import React from "react";
+import { ModeToggle } from "./theme-toggle";
+import { IconBrandSpotify } from "@tabler/icons-react";
 
 export default function Navbar() {
   return (
-    <div className='flex w-full fixed top-0 justify-center z-10 px-2'>
-        <div className='max-w-[30rem] flex items-center justify-between border p-3 px-5 bg-white dark:bg-black w-full rounded-b-xl shadow-md'>
-            <div className='flex items-center gap-1'>
-                Spotify
-            </div>
-            <ModeToggle />
+    <div className="flex w-full fixed top-0 justify-center z-10 px-2">
+      <div className="max-w-[30rem] flex items-center justify-between border p-3 px-5 bg-white dark:bg-black w-full rounded-b-xl shadow-md">
+        <div className="flex items-center gap-1">
+          <IconBrandSpotify className="text-green-500" />
+          Spotify Ringtone
         </div>
+        <ModeToggle />
+      </div>
     </div>
-  )
+  );
 }

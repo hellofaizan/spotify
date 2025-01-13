@@ -11,7 +11,6 @@ export async function GET(request: Request) {
 
   const metadata = await getSpotifyMetadata(url as string);
 
-  console.log(metadata);
   if (!metadata) {
     return NextResponse.json(
       { error: "Error fetching Spotify metadata" },

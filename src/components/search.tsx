@@ -27,7 +27,7 @@ export default function SearchBar() {
       <form className="flex gap-2 w-full" onSubmit={handleSubmit(onSubmit)}>
         <input
           type="url"
-          placeholder="https://open.spotify.com/track/..."
+          placeholder="spotify song link here.."
           className="h-12 rounded-lg border p-2 px-3 focus:border-muted-foreground focus:outline-none flex-1"
           {...register("link")}
         />

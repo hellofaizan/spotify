@@ -41,11 +41,16 @@ export default function Player({ url }: { url: string }) {
       {isLoading ? (
         <Loader className="animate-spin" size={14} />
       ) : isPlaying ? (
-        <Pause size={14} />
+        <div className="flex items-center gap-1">
+          <Pause size={14} />
+          pause
+        </div>
       ) : (
-        <Play size={14} />
+        <div className="flex items-center gap-1">
+          <Play size={14} />
+          play
+        </div>
       )}
-      preview
     </button>
   );
 }
