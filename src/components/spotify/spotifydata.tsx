@@ -7,7 +7,9 @@ export default function Spotifydata({ url }: { url: string }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios(`/api/spotifydata?url=${encodeURIComponent(url)}`);
+      const response = await axios(
+        `/api/spotifydata?url=${encodeURIComponent(url)}`
+      );
       if (response.status === 200) {
         setData(response.data);
       }
@@ -17,7 +19,7 @@ export default function Spotifydata({ url }: { url: string }) {
 
   return (
     <div className="w-full">
-      <SpotifyComponent data={data} url={url} />
+      {data && <SpotifyComponent data={data} url={url} />}
     </div>
   );
 }

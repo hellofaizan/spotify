@@ -9,6 +9,10 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "No URL provided" }, { status: 409 });
   }
 
+  if (!url.startsWith('https://open.spotify.com/track')) {
+    return NextResponse.json({ error: "Invalid URL" }, { status: 400 });
+  }
+
   const metadata = await getSpotifyMetadata(url as string);
 
   if (!metadata) {
