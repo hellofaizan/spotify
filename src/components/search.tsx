@@ -33,7 +33,7 @@ export default function SearchBar() {
         />
 
         <Button
-          className="flex gap-1 flex-none rounded-lg h-full"
+          className="flex gap-1 flex-none rounded-lg h-12"
           type="submit"
           variant={"outline"}
         >
